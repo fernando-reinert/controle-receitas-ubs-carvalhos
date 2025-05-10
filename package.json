@@ -1,0 +1,78 @@
+{
+  "name": "medical-prescription-system",
+  "private": true,
+  "version": "1.1.1",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"npm run dev\" \"electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "start": "node server.js",
+    "server": "node electron/server.js",
+    "electron:start": "npm run server && electron ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.7",
+    "axios": "^1.8.4",
+    "express": "^5.1.0",
+    "lucide-react": "^0.344.0",
+    "open": "^10.1.1",
+    "pg": "^8.14.1",
+    "pg-promise": "^11.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-input-mask": "^2.0.4",
+    "react-router-dom": "^6.22.2",
+    "recharts": "^2.15.2",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-input-mask": "^3.0.6",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "electron": "^29.4.6",
+    
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.14"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.medicalprescription.app",
+    "productName": "Controle de Receitas",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "nsis",  
+      "icon": "src/img/smscarvalhos.ico", 
+      "requestedExecutionLevel": "asInvoker",
+      "publish": null,
+      "extraResources": [], 
+      "extraFiles": [] 
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,18 @@
+directories:
+  output: dist-electron
+  buildResources: build
+asar: false
+appId: com.medicalprescription.app
+productName: Controle de Receitas
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+win:
+  target: nsis
+  icon: src/img/smscarvalhos.ico
+  requestedExecutionLevel: asInvoker
+  publish: null
+  extraResources: []
+  extraFiles: []
+electronVersion: 29.4.6
