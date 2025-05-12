@@ -1,1 +1,1 @@
-estou fazendo um programa para o posto de saude da minha cidade, no qualk vamos pegfar o paciente e deixar anotado nesse site as receitas que ele pegou e qual medico prescreveu para ele. assim teremos um controle de quando a receita foi emitida e quando esta sendo renovadda. vou te mandar partes do codigo parta voce me ajudar a terminar este programa
+
